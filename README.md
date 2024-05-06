@@ -28,15 +28,58 @@ From the above characteristic table, we can directly write the next state equati
 
 **Procedure**
 
-/* write all the steps invloved */
+
+ Step 1: Write code to implement SR flipflop using verilog and validating their functionality using their functional tables.
+
+Step 2: Run compilation to check for errors.
+
+Step 3: Open waveform output and load input values.
+
+Step 4: Run simulation to get the output.
+
+Step 5: Open in RTL viewers to get RTL diagram output
 
 **PROGRAM**
+```
+ Developed by:  NAVEENAA AK
+RegisterNumber:212222230094
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+```
+```
+module T_FLIPFLOP( input clk, rst_n, input t,
+output reg q,
+output q_bar
+);
+always@(posedge clk) 
+begin 
+if(!rst_n)
+ q<=0;
+ else
+ if(t)
+ q<=~q;
+ else
+ q<=q;
+ end
+ 
+assign q_bar = ~q;
+endmodule
+
+```
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![image](https://github.com/Praveenamanikandan/T-FLIPFLOP-POSEDGE/assets/144870776/8f1f2b13-0496-475f-bdf9-9c9070ccb277)
+
+
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+
+![image](https://github.com/Praveenamanikandan/T-FLIPFLOP-POSEDGE/assets/144870776/f8a9536c-955a-4615-84db-0015153fd123)
+
 **RESULTS**
+
+
+
+T flipflop using verilog and validating their functionality using their functional tables completed.
+
